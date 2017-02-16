@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Played>
+  <User id="deusa@de4.pt">
+    <Game idJogo="21182" played="true" score="1"/>
+    <Game idJogo="324" played="true"  score="2"/>
+  </User>
+</Played>

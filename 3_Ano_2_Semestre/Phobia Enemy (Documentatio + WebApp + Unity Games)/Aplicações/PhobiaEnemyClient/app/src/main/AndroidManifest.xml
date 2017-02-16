@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="enemy.phobia.client">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PhobiaEnemyClient"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Login">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+        </activity>
+        <activity android:name=".Menu">
+
+        </activity>
+        <activity android:name=".ServingManager">
+        </activity>
+
+        <service
+            android:name="enemy.phobia.client.BluetoothService"
+            android:exported="false"
+            >
+        </service>
+
+        <activity android:name="enemy.phobia.client.DropboxActivity">
+        </activity>
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask">
+            <intent-filter>
+
+                <!-- Change this to be db- followed by your app key -->
+                <data android:scheme="db-fpbjn9ly2dt9nka" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="enemy.phobia.client.Video_app">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="enemy.phobia.client.DropboxActivity" />
+        </activity>
+        <activity
+            android:name="enemy.phobia.client.VjListActivity"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+        </activity>
+
+        <service
+            android:name="enemy.phobia.client.VitalJacket_Service"
+            android:exported="false"
+            />
+        <service android:name=".SendToUnityService">
+            <intent-filter>
+                <action android:name="sendtounityservice.sendintent.test.com.myapplication.IntentToUnity" />
+            </intent-filter>
+        </service>
+        <activity android:name=".SkipLogin">
+
+        </activity>
+
+    </application>
+
+</manifest>

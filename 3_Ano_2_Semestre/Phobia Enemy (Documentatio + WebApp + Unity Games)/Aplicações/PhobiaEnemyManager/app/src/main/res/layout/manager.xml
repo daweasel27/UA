@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="---------"
+        android:id="@+id/textView_welcome_menu" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add Clients"
+        android:id="@+id/button_add_client"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/radioButton_sd"
+        android:layout_toRightOf="@+id/radioButton_sd" />
+
+    <ListView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/listView_clients_connected"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_add_client"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView_user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Clients connected"
+        android:id="@+id/textView_user"
+        android:layout_marginTop="77dp"
+        android:layout_below="@+id/button_control"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create session"
+        android:id="@+id/button_control"
+        android:layout_below="@+id/textView_welcome_menu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/radioButton_sd"
+        android:layout_alignLeft="@+id/button_event"
+        android:layout_alignStart="@+id/button_event" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event"
+        android:id="@+id/button_event"
+        android:layout_alignTop="@+id/radioButton_sd"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/radioButton_sd"
+        android:layout_toRightOf="@+id/radioButton_sd" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spider appeared"
+        android:id="@+id/radioButton_sa"
+        android:layout_below="@+id/textView_welcome_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spider disappeared"
+        android:id="@+id/radioButton_sd"
+        android:layout_below="@+id/button_control"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Simulator"
+        android:id="@+id/button_click"
+        android:layout_alignBottom="@+id/button_add_client"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button_add_client"
+        android:layout_toLeftOf="@+id/button_add_client" />
+
+</RelativeLayout>

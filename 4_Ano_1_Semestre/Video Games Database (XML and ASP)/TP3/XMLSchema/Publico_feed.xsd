@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:atom10="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.w3.org/2005/Atom" />
+  <xs:import namespace="http://rssnamespace.org/feedburner/ext/1.0" />
+  <xs:import namespace="http://purl.org/dc/elements/1.1/" />
+  <xs:element name="rss">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="channel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice maxOccurs="unbounded">
+                <xs:element name="title" type="xs:string" />
+                <xs:element name="link" type="xs:string" />
+                <xs:element name="description" type="xs:string" />
+                <xs:element name="copyright" type="xs:string" />
+                <xs:element name="language" type="xs:string" />
+                <xs:element name="lastBuildDate" type="xs:string" />
+                <xs:element name="category" type="xs:string" />
+                <xs:element name="ttl" type="xs:unsignedByte" />
+                <xs:element name="managingEditor" type="xs:string" />
+                <xs:element name="webMaster" type="xs:string" />
+                <xs:element name="image">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="url" type="xs:string" />
+                      <xs:element name="title" type="xs:string" />
+                      <xs:element name="link" type="xs:string" />
+                      <xs:element name="width" type="xs:unsignedByte" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element ref="atom10:link" />
+                <xs:element ref="feedburner:info" />
+                <xs:element name="item">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="title" type="xs:string" />
+                      <xs:element name="description" type="xs:string" />
+                      <xs:element name="link" type="xs:string" />
+                      <xs:element name="category" type="xs:string" />
+                      <xs:element name="pubDate" type="xs:string" />
+                      <xs:element ref="dc:creator" />
+                      <xs:element name="guid" type="xs:string" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

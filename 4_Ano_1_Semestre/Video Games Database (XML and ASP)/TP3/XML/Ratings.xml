@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ratings>
+  <User id="deusa@de4.pt">
+    <Rating idJogo="21182" Rating="24" />
+    <Rating idJogo="123" Rating="25" />
+  </User>
+  <User id="joao@ua.pt">
+    <Rating idJogo="21182" Rating="21" />
+    <Rating idJogo="13359" Rating="24" />
+    <Rating idJogo="2854" Rating="99" />
+    <Rating idJogo="2124" Rating="24" />
+    <Rating idJogo="21416" Rating="25" />
+  </User>
+</Ratings>
